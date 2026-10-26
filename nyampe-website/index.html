@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3730A3"><meta name="description" content="NYAMPE membantu kamu menemukan cara perjalanan di Medan dengan lebih jelas.">
+  <title>NYAMPE | Jelajah Kota, Cara Kamu.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+</head>
+<body><main class="page-shell">
+  <header class="site-header"><a class="brand" href="#" aria-label="NYAMPE, beranda"><img src="assets/images/logo-nyampe.png" alt="NYAMPE"></a></header>
+  <section class="hero" aria-labelledby="hero-title">
+    <img class="hero-mark" src="assets/images/icon-nyampe.png" alt="" aria-hidden="true">
+    <div class="hero-copy"><p class="eyebrow">JELAJAH KOTA, CARA KAMU.</p><h1 id="hero-title">Kota baru?<br>Yuk, Cari Jalanmu.</h1></div>
+    <form class="search-panel" id="route-search">
+      <div class="location-fields">
+        <label class="location-row" for="origin"><span class="location-icon origin-icon" aria-hidden="true"></span><span class="field-copy"><span class="field-label">BERANGKAT DARI</span><input id="origin" name="origin" type="text" placeholder="Pilih lokasi awal" list="medan-locations" autocomplete="off" required></span></label>
+        <div class="field-divider"></div>
+        <label class="location-row" for="destination"><span class="location-icon destination-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg></span><span class="field-copy"><span class="field-label">MAU KE MANA?</span><input id="destination" name="destination" type="text" placeholder="Pilih tujuanmu" list="medan-locations" autocomplete="off" required></span></label>
+        <button class="swap-button" type="button" id="swap-locations" aria-label="Tukar lokasi asal dan tujuan"><svg viewBox="0 0 24 24"><path d="M7 3v17m0-17L3.5 6.5M7 3l3.5 3.5M17 21V4m0 17-3.5-3.5M17 21l3.5-3.5"/></svg></button>
+      </div>
+      <datalist id="medan-locations"><option value="Universitas Sumatera Utara"></option><option value="DeliPark Mall"></option><option value="Ringroad City Walks"></option><option value="Istana Maimun"></option><option value="Stasiun Medan"></option><option value="Graha Maria Annai Velangkanni"></option><option value="Center Point Medan"></option></datalist>
+      <button class="search-button" type="submit"><span>Cari cara perjalanan</span><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button><p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+  <section class="popular-section" aria-labelledby="popular-title"><div class="section-heading"><h2 id="popular-title">Lokasi populer di Medan</h2><a href="#route-search" class="text-link" id="see-all">Lihat semua</a></div>
+    <div class="popular-list">
+      <button class="place-card" type="button" data-place="Universitas Sumatera Utara"><img src="assets/images/usu.jpg" alt="Tulisan USU di area Universitas Sumatera Utara" loading="lazy"><span class="place-text"><strong>USU</strong><small>Kampus</small></span></button>
+      <button class="place-card" type="button" data-place="DeliPark Mall"><img src="assets/images/delipark.jpg" alt="Gedung DeliPark Mall" loading="lazy"><span class="place-text"><strong>DeliPark<br>Mall</strong><small>Pusat Belanja</small></span></button>
+      <button class="place-card" type="button" data-place="Ringroad City Walks"><img src="assets/images/ringroad.jpg" alt="Ringroad City Walks pada malam hari" loading="lazy"><span class="place-text"><strong>Ringroad<br>City Walks</strong><small>Pusat Belanja</small></span></button>
+    </div>
+  </section>
+  <section class="why-card" aria-labelledby="why-title"><div class="why-inner"><h2 id="why-title">Kenapa pakai <strong>NYAMPE?</strong></h2>
+    <div class="benefits">
+      <article class="benefit"><svg viewBox="0 0 40 40"><rect x="5" y="9" width="30" height="22" rx="5"/><circle cx="20" cy="20" r="6"/><path d="M9 14h3m16 0h3M9 26h3m16 0h3"/></svg><h3>Pilih yang<br>sesuai budget</h3><p>Bandingkan estimasi biaya perjalanan.</p></article>
+      <article class="benefit"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><path d="M20 11v10l6 5"/></svg><h3>Hemat waktu</h3><p>Lihat estimasi waktu dan jumlah tahap.</p></article>
+      <article class="benefit"><svg viewBox="0 0 40 40"><path d="M8 11h24l-4 8H12zM12 22h16l5 7H7z"/><path d="M20 6v5m0 11v-3"/></svg><h3>Instruksi jelas</h3><p>Titik, naik, turun, dan transit yang mudah diikuti.</p></article>
+    </div>
+    <a class="landmark-banner" href="#route-search" aria-label="Cari perjalanan ke Velangkanni"><img src="assets/images/velankanni.jpg" alt="Bangunan Graha Maria Annai Velangkanni" loading="lazy"><span class="banner-shade"></span><span class="banner-label">velankanni</span><span class="banner-arrow" aria-hidden="true">↗</span></a>
+  </div></section>
+  <section class="results-section" id="results" aria-labelledby="results-title" hidden><div class="section-heading"><h2 id="results-title">Contoh rekomendasi perjalanan</h2><span class="simulation-tag">Data simulasi</span></div><p class="results-route" id="results-route"></p><div class="route-options" id="route-options"></div><p class="disclaimer">Biaya, durasi, dan tahapan di bawah ini adalah contoh simulasi, bukan data transportasi real-time.</p></section>
+  <footer class="site-footer"><img src="assets/images/logo-nyampe.png" alt="NYAMPE" loading="lazy"><p>Temukan jalan, temukan cerita baru.</p><p class="sdg-note">Mendukung SDG 11: Sustainable Cities and Communities.</p><small>Contoh rute dan estimasi pada prototype ini bersifat simulasi.</small></footer>
+</main><script src="js/main.js"></script></body></html>
